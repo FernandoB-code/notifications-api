@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resumen de tu Compra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tfoot {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Purchase Details</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.quantity}"></td>
+        <td th:text="${product.totalPrice}"></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="2">Total</td>
+        <td th:text="${total}"></td>
+    </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>
