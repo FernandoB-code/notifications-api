@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class MailProductsDTO {
+public class EmailProductsDTO {
 
     private List<ResumeProduct> resumeProductList;
     private double totalPrice;
