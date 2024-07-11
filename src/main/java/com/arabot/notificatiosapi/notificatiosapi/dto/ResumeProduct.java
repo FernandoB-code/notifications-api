@@ -12,6 +12,7 @@ public class ResumeProduct {
         private UUID productId;
         private String name;
         private int quantity;
+        private double unitePrice;
         private double totalPrice;
 
 }
